@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form Tag </title>
+	<style>
+		body{
+			font-family:arial;
+		}
+		input:focus{
+			border:2px solid lightgreen;
+		}
+		input:disabled{
+			border:2px solid red;
+		}
+		input:required{
+			border:2px solid orange;
+		}
+		input[type='checkbox']:checked{
+			box-shadow:0 0 0 3px lightgreen;
+		}
+		input[type='radio']:checked + label{
+			box-shadow:0 0 0 3px skyblue;
+			color:red;
+		}
+		option:default{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset >
+			<legend> Documents </legend>
+		<label> Name : </label> <input type="text" name="fname:" placeholder="Lunatic Shuvam" required><br><br>
+
+		<label>Password : </label> <input type="password" name="Password:" disabled><br><br>
+
+		<label>Gender</label>
+
+		<input type="radio" name="gender" id='male'>
+		<label for="male">Male</label>
+
+		<input type="radio" name="gender" id="female">
+		<label for="female">Female</label><br><br>
+
+		<label> Select your Hobbys : </label>
+		<input type="checkbox" name="hobby" id='sports'><label for='sports'>Sports</label>
+		<input type="checkbox" name="hobby" id='misuc'><label for='misuc'> Music </label>
+		<input type="checkbox" name="hobby" id='dance'><label for='dance'> Dance </label>
+		<input type="checkbox" name="hobby" id='reading'><label for='reading'> Reading</label> <br><br>
+
+		<label>Continent</label>
+		<select name="Continent" size="4" multiple>
+			<option value=""> Asia </option>
+			<option value=""> Africa </option>
+			<option value=""> Europe </option>
+			<option value=""> North America </option>
+			<option value=""> South America </option>
+			<option value=""> Antertica </option>
+			<option value="" selected> Australia </option>
+		</select> <br> <br>
+
+		<label> Bike </label>
+			<select>
+				<optgroup label="Yamaha">
+					<option> R15 </option>
+					<option> R6 </option>
+					<option> R1 </option>
+				</optgroup>
+				<optgroup label="Bajaj">
+					<option> Pulsar 150 </option>
+					<option> Pulsar 200NS </option>
+					<option> Pulsar 220F </option>
+				</optgroup>
+			</select>
+			<br><br>
+			<label>Cars</label>
+				<input list="cars" type="" name="">
+				<datalist id="cars">
+					<option value="Innova"></option>
+					<option value="Duster"></option>
+					<option value="Swift"></option>
+				</datalist>
+				<br><br>
+
+				<label> Upload File : </label>
+				<input type="file" name="" accept="image/*" />
+				<br><br>
+
+		<label> Message </label>
+		<textarea rows="10" cols="60">
+			Lunatic Shuvam
+		</textarea><br><br>
+		<input type="submit" name="" value="Save" />
+		<input type="reset" name=""/>
+		<input type="button" name="" value="Click Me">
+		<input type="image" src="Images/BA.jpg" width="100px" height="50px" name="" alt="Submit Button">
+		</fieldset>
+	</form>
+</body>
+</html>
